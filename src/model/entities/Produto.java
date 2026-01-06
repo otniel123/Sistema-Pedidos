@@ -11,6 +11,10 @@ public class Produto {
     private Integer estoque;
     private Date dataCadastro;
 
+    public Produto(){}
+
+
+
     public Produto(Integer id, String nome, String descricao, Double preco, Integer estoque, Date data_cadastro) {
         this.id = id;
         this.nome = nome;
