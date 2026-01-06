@@ -14,8 +14,25 @@ public class Pedido {
     private Date dataPedido;
     private StatusPedido status;
 
+    public Pedido(){
+
+    }
+    public Pedido(Integer id, Produto produto, Cliente cliente, Integer quantidade, Double valorTotal, Date dataPedido, StatusPedido status) {
+        this.id = id;
+        this.produto = produto;
+        this.cliente = cliente;
+        this.quantidade = quantidade;
+        this.valorTotal = valorTotal;
+        this.dataPedido = dataPedido;
+        this.status = status;
+    }
+
     public Integer getId() {
         return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public Produto getProduto() {
@@ -46,6 +63,10 @@ public class Pedido {
         return valorTotal;
     }
 
+    public void setValorTotal(Double valorTotal) {
+        this.valorTotal = valorTotal;
+    }
+
     public Date getDataPedido() {
         return dataPedido;
     }
@@ -69,6 +90,7 @@ public class Pedido {
         Pedido pedido = (Pedido) o;
         return Objects.equals(id, pedido.id);
     }
+
 
     @Override
     public int hashCode() {

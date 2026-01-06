@@ -1,9 +1,12 @@
 package model.enums;
 
 public enum StatusPedido {
-    PENDENTE,
-    CONFIRMADO,
-    ENVIADO,
-    ENTREGUE,
-    CANCELADO
+    PENDENTE("PENDENTE"),
+    CONFIRMADO("CONFIRMADO"),
+    ENVIADO("ENVIADO"),
+    ENTREGUE("ENTREGUE"),
+    CANCELADO("CANCELADO");
+
+    StatusPedido(String status) {
+    }
 }

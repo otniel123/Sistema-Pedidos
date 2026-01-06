@@ -4,6 +4,7 @@ import model.entities.Pedido;
 import model.enums.StatusPedido;
 
 import java.time.LocalDate;
+import java.util.Date;
 import java.util.List;
 
 public interface PedidoDao {
@@ -23,7 +24,7 @@ public interface PedidoDao {
     List<Pedido> buscarPorStatus(StatusPedido status);
 
     // Consultas por Data
-    List<Pedido> buscarPorPeriodo(LocalDate dataInicio, LocalDate dataFim);
+    List<Pedido> buscarPorPeriodo(java.sql.Date dataInicio, java.sql.Date dataFim);
 
     // Atualização de Status
     void atualizarStatus(Integer id, StatusPedido status);
